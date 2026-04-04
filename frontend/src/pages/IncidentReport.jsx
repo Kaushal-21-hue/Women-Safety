@@ -13,7 +13,7 @@ const IncidentReport = () => {
   const [pincode, setPincode] = useState("");
 
   // ✅ Backend API
-  const API = "https://womensecbackend.onrender.com/api/v1/incidents";
+  const API = "http://localhost:5000/api/v1/incidents";
 
   // ================= SUBMIT INCIDENT =================
   const submitIncident = async (e) => {

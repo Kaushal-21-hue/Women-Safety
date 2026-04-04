@@ -28,7 +28,7 @@ const Report = () => {
             return false
         }
         try {
-            const res = await axios.post('https://womensecbackend.onrender.com/api/v1/incidents',
+            const res = await axios.post('http://localhost:5000/api/v1/incidents',
                 { report, pincodeOfIncident, address });
 
             if (res.status === 201) {
@@ -42,10 +42,12 @@ const Report = () => {
         <>
             <Navbar />
             <div className='marginStyle '>
-                <div class="container d-flex justify-content-center align-items-center">
-                    <div class="row border rounded-5 p-3 bg-white shadow box-area reverseCol">
-                        <div class="col-md-6 rounded-4 d-flex justify-content-center align-items-center flex-column left-box">
-                            <div class="featured-image mb-3 animateImg">
+                <div className="container d-flex justify-content-center align-items-center">
+
+                    <div className="row border rounded-5 p-3 bg-white shadow box-area reverseCol">
+
+                        <div className="col-md-6 rounded-4 d-flex justify-content-center align-items-center flex-column left-box">
+                            <div className="featured-image mb-3 animateImg">
                                 <img src={reports} class="img-fluid" />
                             </div>
                         </div>

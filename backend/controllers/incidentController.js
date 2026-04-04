@@ -3,8 +3,14 @@ const Incident = require("../models/incidentModel");
 // CREATE INCIDENT
 exports.createIncident = async (req, res) => {
     try {
-        const { uname, report, address, pincode } = req.body;
-        const newIncident = new Incident({ uname, report, address, pincode });
+        const { report, address, pincodeOfIncident, uname } = req.body;
+        const pincode = pincodeOfIncident || pincode;
+        const newIncident = new Incident({
+            uname: uname || 'Anonymous',
+            report,
+            address,
+            pincode
+        });
         await newIncident.save();
         res.status(201).json(newIncident);
     } catch (error) {
