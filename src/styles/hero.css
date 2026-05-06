@@ -1,0 +1,169 @@
+.banner_wrapper {
+  display: flex;
+  width: 100%;
+  padding: 120px 0 150px;
+  background-image: var(--gradient);
+  background-size: cover;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  overflow: hidden;
+}
+
+.siren-bg-animation {
+  position: absolute;
+  top: 20%;
+  right: 10%;
+  width: 150px;
+  height: 150px;
+  background: url('../gifs/siren.gif') no-repeat center;
+  background-size: contain;
+  opacity: 0.1;
+  animation: float-rotate 6s ease-in-out infinite;
+  z-index: 1;
+}
+
+@keyframes float-rotate {
+
+  0%,
+  100% {
+    transform: translateY(0px) rotate(0deg);
+  }
+
+  33% {
+    transform: translateY(-20px) rotate(10deg);
+  }
+
+  66% {
+    transform: translateY(10px) rotate(-10deg);
+  }
+}
+
+.banner_wrapper .banner-subtitle {
+  font-size: 28px;
+  font-weight: 700;
+  line-height: 1.4;
+  margin-bottom: 10px;
+  color: var(--accent);
+}
+
+.banner_wrapper .banner-subtitle-small {
+  font-size: 20px;
+  font-weight: 400;
+  color: var(--text-secondary);
+  margin-bottom: 30px;
+}
+
+.banner_wrapper .banner-title {
+  font-weight: 800;
+  font-size: 56px;
+  text-transform: capitalize;
+  line-height: 1.15;
+  margin-bottom: 40px;
+  color: var(--text-primary);
+}
+
+.banner_wrapper .banner-title span {
+  color: blueviolet;
+}
+
+.banner_wrapper .banner-title-text {
+  font-size: 17px;
+  font-weight: 600;
+  line-height: 1.5;
+  margin-bottom: 40px;
+  max-width: 450px;
+  color: rgb(84, 84, 84);
+}
+
+.banner_wrapper .learn-more-btn-section {
+  display: flex;
+  gap: 20px;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  margin-top: 30px;
+}
+
+.learn-more-btn {
+  padding: 15px 30px;
+  font-size: 18px;
+  font-weight: 600;
+  border-radius: 50px;
+  text-decoration: none;
+  transition: all 0.3s ease;
+  background: var(--accent);
+  color: white !important;
+  box-shadow: var(--shadow) 0 4px 12px;
+}
+
+.learn-more-btn:hover {
+  transform: translateY(-3px);
+  box-shadow: var(--shadow) 0 8px 20px;
+  background: var(--accent-light);
+}
+
+.sos-btn {
+  background: linear-gradient(45deg, #ff0000, #ff4444) !important;
+}
+
+.location-btn {
+  background: linear-gradient(45deg, var(--accent), var(--accent-light)) !important;
+}
+
+.banner_wrapper .header-img-section img {
+  width: 100%;
+  animation: float 5s ease-in-out infinite;
+}
+
+@keyframes float {
+  0% {
+    transform: translatey(0px);
+  }
+
+  50% {
+    transform: translatey(20px);
+  }
+
+  100% {
+    transform: translatey(0px);
+  }
+}
+
+@media (max-width: 1230px) {
+  .banner_wrapper .banner-title {
+    font-size: 50px;
+  }
+}
+
+@media (max-width: 767px) {
+  .banner_wrapper {
+    padding: 100px 0 100px;
+  }
+
+  .banner_wrapper .row {
+    flex-direction: column-reverse;
+  }
+
+  .banner_wrapper .learn-more-btn-section {
+    justify-content: center;
+  }
+}
+
+@media (max-width: 991px) {
+  .banner_wrapper .banner-title {
+    font-size: 36px;
+  }
+}
+
+.shape-fill {
+  fill: #8400ff;
+  padding: 0 !important;
+  margin-top: -1px !important;
+}
+
+@media (max-width: 500px) {
+  .shape-fill {
+    display: none;
+  }
+}

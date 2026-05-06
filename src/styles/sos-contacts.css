@@ -1,0 +1,61 @@
+/* SOS Emergency Contacts Modern Styling */
+.sos-contact-card {
+    transition: all 0.3s ease;
+    cursor: pointer;
+    border: 2px solid #e9ecef !important;
+}
+
+.sos-contact-card:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.15) !important;
+    border-color: #f8d7da !important;
+}
+
+.sos-contact-card.selected {
+    border-color: #dc3545 !important;
+    background: linear-gradient(135deg, #fff5f5 0%, #ffebee 100%) !important;
+    box-shadow: 0 0 0 3px rgba(220, 53, 69, 0.25) !important;
+}
+
+.select-checkbox {
+    transition: all 0.2s ease;
+}
+
+.select-checkbox:hover {
+    transform: scale(1.1);
+}
+
+.btn-group-sm .btn {
+    padding: 0.25rem 0.5rem;
+    font-size: 0.8rem;
+}
+
+@media (max-width: 768px) {
+    .sos-contact-card .btn {
+        padding: 0.375rem 0.25rem;
+        font-size: 0.75rem;
+    }
+
+    .card-body {
+        padding: 1rem !important;
+    }
+}
+
+/* Red emergency theme accents */
+.badge-danger {
+    animation: pulse 2s infinite;
+}
+
+@keyframes pulse {
+    0% {
+        box-shadow: 0 0 0 0 rgba(220, 53, 69, 0.7);
+    }
+
+    70% {
+        box-shadow: 0 0 0 10px rgba(220, 53, 69, 0);
+    }
+
+    100% {
+        box-shadow: 0 0 0 0 rgba(220, 53, 69, 0);
+    }
+}

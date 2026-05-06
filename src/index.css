@@ -1,0 +1,63 @@
+/* CSS Variables for Light/Dark Theme */
+:root {
+    --bg-primary: #ffffff;
+    --bg-secondary: #f9f5ff;
+    --text-primary: #101010;
+    --text-secondary: #666666;
+    --accent: #8400ff;
+    --accent-light: #ba9aff;
+    --gradient: linear-gradient(to bottom, #ffffff, #f9f5ff, #d5c2ff, #ba9aff, #9e63ff, #8400ff);
+    --shadow: rgba(45, 35, 66, 0.4);
+}
+
+html.dark {
+    --bg-primary: #0a0a0a;
+    --bg-secondary: #1a1a1a;
+    --text-primary: #ffffff;
+    --text-secondary: #cccccc;
+    --accent: #c084fc;
+    --accent-light: #e879f9;
+    --gradient: linear-gradient(to bottom, #0a0a0a, #1a1a1a, #312e81, #1e1b4b, #3730a3, #7c3aed);
+    --shadow: rgba(139, 92, 246, 0.4);
+}
+
+/* Apply vars globally */
+body {
+    background: var(--bg-primary);
+    color: var(--text-primary);
+    transition: all 0.3s ease;
+}
+
+.banner_wrapper {
+    background-image: var(--gradient);
+}
+
+/* Hero title etc */
+.banner-title {
+    color: var(--text-primary);
+}
+
+.banner-title span {
+    color: var(--accent);
+}
+
+.banner-subtitle {
+    color: var(--accent);
+}
+
+/* Buttons */
+.learn-more-btn,
+.button-30 {
+    background: var(--accent);
+    color: white;
+}
+
+.button-30 {
+    box-shadow: var(--shadow) 0 2px 4px;
+}
+
+/* Table dark mode */
+.table-dark {
+    background: var(--bg-secondary);
+    color: var(--text-primary);
+}
